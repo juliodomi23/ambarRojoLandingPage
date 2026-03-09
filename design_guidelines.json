@@ -1,0 +1,91 @@
+{
+  "project_name": "Ambar Rojo Studios",
+  "theme": "dark",
+  "colors": {
+    "primary": "#C0002A",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#0A0A0F",
+    "secondary_foreground": "#D4860A",
+    "accent": "#E60032",
+    "background": "#050508",
+    "surface": "#0F0F14",
+    "surface_highlight": "#1A1A22",
+    "text_primary": "#F5F5F5",
+    "text_secondary": "#A0A0A0",
+    "border": "#2A2A35",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "typography": {
+    "font_heading": "Bebas Neue, sans-serif",
+    "font_body": "Manrope, sans-serif",
+    "h1": "text-7xl md:text-9xl font-bold tracking-tighter leading-none uppercase",
+    "h2": "text-5xl md:text-7xl font-bold tracking-tight uppercase",
+    "h3": "text-3xl md:text-5xl font-semibold tracking-wide uppercase",
+    "body_large": "text-lg md:text-xl font-light leading-relaxed tracking-wide",
+    "body_default": "text-base font-normal leading-relaxed text-slate-400",
+    "caption": "text-sm font-medium tracking-[0.2em] uppercase text-red-500"
+  },
+  "layout": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_spacing": "py-24 md:py-32",
+    "grid_gap": "gap-8 md:gap-12",
+    "radius": {
+      "default": "rounded-none",
+      "button": "rounded-full",
+      "card": "rounded-xl"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+    "neon_glow": "shadow-[0_0_20px_rgba(192,0,42,0.5)]",
+    "grain_overlay": "opacity-20 pointer-events-none fixed inset-0 z-50 mix-blend-overlay",
+    "gradient_text": "bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-500"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#C0002A] hover:bg-[#E60032] text-white px-8 py-4 rounded-full font-bold tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_25px_rgba(192,0,42,0.6)] hover:-translate-y-1",
+      "secondary": "bg-transparent border border-white/20 text-white hover:border-[#C0002A] hover:text-[#C0002A] px-8 py-4 rounded-full font-bold tracking-widest uppercase transition-all duration-300",
+      "whatsapp": "fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300"
+    },
+    "cards": {
+      "service_card": "group relative p-8 h-full bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#C0002A]/50 transition-all duration-500 overflow-hidden",
+      "portfolio_card": "relative overflow-hidden group aspect-[4/5] md:aspect-[3/4]"
+    }
+  },
+  "animations": {
+    "scroll_reveal": {
+      "initial": { "opacity": 0, "y": 50 },
+      "whileInView": { "opacity": 1, "y": 0 },
+      "viewport": { "once": true, "margin": "-10%" },
+      "transition": { "duration": 0.8, "ease": [0.22, 1, 0.36, 1] }
+    },
+    "hover_glow": {
+      "whileHover": { "boxShadow": "0 0 30px rgba(192,0,42,0.4)" }
+    }
+  },
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1763596396590-81193928cdeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHJlZCUyMGdsb3dpbmclMjBnZW9tZXRyaWMlMjBzaGFwZXMlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzMwMzIxMzN8MA&ixlib=rb-4.1.0&q=85",
+    "about_amber": "https://images.unsplash.com/photo-1767642459780-1c2506f4654b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHJlZCUyMGdsb3dpbmclMjBnZW9tZXRyaWMlMjBzaGFwZXMlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzMwMzIxMzN8MA&ixlib=rb-4.1.0&q=85",
+    "service_software": "https://images.unsplash.com/photo-1759661881353-5b9cc55e1cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BlciUyMGNvZGluZyUyMGRhcmslMjByb29tJTIwcmVkJTIwbGlnaHR8ZW58MHx8fHwxNzczMDMyMTM0fDA&ixlib=rb-4.1.0&q=85",
+    "service_mobile": "https://images.unsplash.com/photo-1596742578443-7682ef5251cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBwaG9uZSUyMGRhcmslMjBiYWNrZ3JvdW5kJTIwYXBwJTIwdWl8ZW58MHx8fHwxNzczMDMyMTQ1fDA&ixlib=rb-4.1.0&q=85",
+    "service_game": "https://images.unsplash.com/photo-1577741314755-048d8525d31e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxnYW1lciUyMGhvbGRpbmclMjBjb250cm9sbGVyJTIwcmVkJTIwbGlnaHR8ZW58MHx8fHwxNzczMDMyMTQ0fDA&ixlib=rb-4.1.0&q=85",
+    "portfolio_1": "https://images.unsplash.com/photo-1762009365851-c5b5b1aae3b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHJlZCUyMGdsb3dpbmclMjBnZW9tZXRyaWMlMjBzaGFwZXMlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzMwMzIxMzN8MA&ixlib=rb-4.1.0&q=85",
+    "portfolio_2": "https://images.unsplash.com/photo-1738641928061-e68c5e8e2f2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBwaG9uZSUyMGRhcmslMjBiYWNrZ3JvdW5kJTIwYXBwJTIwdWl8ZW58MHx8fHwxNzczMDMyMTQ1fDA&ixlib=rb-4.1.0&q=85",
+    "portfolio_3": "https://images.unsplash.com/photo-1674044164226-719e76fa644b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxnYW1lciUyMGhvbGRpbmclMjBjb250cm9sbGVyJTIwcmVkJTIwbGlnaHR8ZW58MHx8fHwxNzczMDMyMTQ0fDA&ixlib=rb-4.1.0&q=85",
+    "team_meeting": "https://images.unsplash.com/photo-1758691737182-d42aefd6dee8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwbWVldGluZyUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3NzMwMzIxNDZ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "universal_guidelines": [
+    "FORCE DARK MODE: This is a 'Dark Forge' aesthetic. Ensure the <html> tag has class='dark' and background is set to #050508.",
+    "NO GENERIC CARDS: Do not use standard white cards. Use glassmorphism or invisible borders.",
+    "ASYMMETRY IS KING: Do not center the portfolio grid. Use the 'Tetris' bento grid layout.",
+    "RED IS SACRED: Use the primary red (#C0002A) SPARINLGY. Only for main CTAs and key accents. Do not flood the UI with red.",
+    "TYPOGRAPHY CONTRAST: Use huge, bold, condensed uppercase headings vs small, clean, light body text.",
+    "INTERACTIVITY: Every button must have a hover state (glow, lift, color shift). The cursor should be a custom glowing red dot.",
+    "NAVIGATION: Sticky glassmorphism header with a subtle red bottom border (1px) on scroll.",
+    "FORMS: Inputs should be transparent with bottom borders only, animating to red on focus.",
+    "DATA TEST ID: All interactive elements must have data-testid attributes (e.g., 'contact-submit-btn')."
+  ],
+  "instructions_to_main_agent": "1. Install 'lucide-react' and 'framer-motion'. 2. Configure Tailwind with the provided colors. 3. Create a layout wrapper that enforces the dark theme and adds the grain overlay. 4. Build the Hero section with a custom animated geometric background (CSS or Framer Motion). 5. Implement the 'Tetris' grid for the portfolio. 6. Use the provided image URLs strictly."
+}
