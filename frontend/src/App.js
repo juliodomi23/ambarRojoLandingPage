@@ -904,7 +904,7 @@ const Contact = () => {
                 Respuesta rápida por WhatsApp. Estamos disponibles para ti.
               </p>
               <a
-                href="https://wa.me/529611234567"
+                href="https://wa.me/529932061338"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-semibold tracking-wide transition-all duration-300 hover:shadow-[0_0_25px_rgba(37,211,102,0.4)] hover:-translate-y-1 w-full"
@@ -1000,7 +1000,7 @@ const Footer = () => {
 const WhatsAppButton = () => {
   return (
     <motion.a
-      href="https://wa.me/529611234567"
+      href="https://wa.me/529932061338"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}
