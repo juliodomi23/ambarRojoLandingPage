@@ -539,21 +539,24 @@ const Portfolio = () => {
   const projects = [
     {
       category: "App Móvil",
-      title: "FinanzasChiapas",
-      description: "Aplicación de gestión financiera para cooperativas locales",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=80"
+      title: "300 Lugares",
+      description: "App nativa para iOS y Android que conecta a los amantes de la botana con los mejores lugares tradicionales de Chiapas.",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=80",
+      badges: ["iOS", "Android"]
     },
     {
-      category: "Software",
-      title: "Sistema de Inventarios",
-      description: "Plataforma web para control de inventarios en tiempo real",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+      category: "Software a la Medida",
+      title: "Sistema de Gestión Empresarial",
+      description: "Plataforma web personalizada para control de inventario, ventas y reportes en tiempo real.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+      badges: [".NET", "PHP"]
     },
     {
-      category: "Agente IA",
-      title: "AsistenteComercial",
-      description: "Chatbot inteligente para atención al cliente 24/7",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80"
+      category: "Agente de IA",
+      title: "Asistente para Empresas",
+      description: "Automatización de procesos internos: gestión de inventario, seguimiento de tareas, reportes automáticos y flujos de trabajo sin intervención humana.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80",
+      badges: ["IA", "Automatización"]
     }
   ];
 
@@ -613,6 +616,20 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
+                {/* Badges */}
+                {project.badges && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.badges.map(badge => (
+                      <span
+                        key={badge}
+                        className="text-xs px-2.5 py-1 rounded-md bg-[#1A3A2A]/30 border border-[#1A3A2A]/40 text-[#F5F0E8] tracking-wide"
+                      >
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
                 {/* Link */}
                 <a 
                   href="#" 
@@ -644,33 +661,102 @@ const Portfolio = () => {
 
 // AI Highlight Section
 const AISection = () => {
+  const [activeTab, setActiveTab] = useState('cliente');
+
+  const useCases = {
+    cliente: {
+      title: "Atención al Cliente",
+      features: [
+        "Agenda citas automáticamente",
+        "Responde preguntas frecuentes 24/7",
+        "Nunca pierde un lead"
+      ],
+      chatMessages: [
+        { type: 'user', text: '¿Tienen disponibilidad para mañana a las 3pm?' },
+        { type: 'ai', text: '¡Claro! Tenemos disponibilidad mañana a las 3:00 PM. ¿Te gustaría que agende tu cita? Solo necesito tu nombre y número de contacto.' },
+        { type: 'user', text: 'Sí, soy María García, 961-123-4567' }
+      ]
+    },
+    interna: {
+      title: "Gestión Interna",
+      features: [
+        "Automatiza procesos repetitivos",
+        "Gestiona inventario y seguimiento",
+        "Reportes sin intervención humana"
+      ],
+      chatMessages: [
+        { type: 'user', text: '¿Cuál es el estado del inventario de producto A?' },
+        { type: 'ai', text: 'El producto A tiene 45 unidades en stock. Basado en las ventas de los últimos 30 días, te recomiendo hacer un pedido de reabastecimiento esta semana.' },
+        { type: 'user', text: 'Genera un reporte de ventas del mes' }
+      ]
+    }
+  };
+
+  const currentCase = useCases[activeTab];
+
   return (
     <section id="ai" className="ai-section py-24 md:py-32 relative" data-testid="ai-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
+        {/* Header */}
+        <motion.div {...fadeInUp} className="text-center mb-12">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+            Inteligencia Artificial
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
+            Transforma tu negocio con un agente de IA
+          </h2>
+          <div className="maya-divider w-40 mx-auto" />
+        </motion.div>
+
+        {/* Use Case Tabs */}
+        <motion.div {...fadeInUp} className="flex justify-center mb-12">
+          <div className="inline-flex p-1.5 rounded-full bg-[#2A211A] border border-[#C8760A]/10">
+            <button
+              onClick={() => setActiveTab('cliente')}
+              className={`px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                activeTab === 'cliente'
+                  ? 'bg-[#C8760A] text-[#1C1410]'
+                  : 'text-[#9A8B7A] hover:text-[#F5F0E8]'
+              }`}
+              data-testid="ai-tab-cliente"
+            >
+              <MessageCircle className="w-4 h-4 inline-block mr-2" />
+              Atención al Cliente
+            </button>
+            <button
+              onClick={() => setActiveTab('interna')}
+              className={`px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
+                activeTab === 'interna'
+                  ? 'bg-[#C8760A] text-[#1C1410]'
+                  : 'text-[#9A8B7A] hover:text-[#F5F0E8]'
+              }`}
+              data-testid="ai-tab-interna"
+            >
+              <BrainCircuit className="w-4 h-4 inline-block mr-2" />
+              Gestión Interna
+            </button>
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Content */}
-          <motion.div {...fadeInUp}>
-            <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
-              Inteligencia Artificial
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#F5F0E8] mb-6 leading-[1.1]">
-              Transforma tu negocio con un agente de IA
-            </h2>
+          <motion.div 
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="font-serif text-3xl md:text-4xl text-[#F5F0E8] mb-6">
+              {currentCase.title}
+            </h3>
             <div className="maya-divider w-24 mb-8" />
-            <p className="text-lg text-[#9A8B7A] font-light leading-relaxed mb-6">
-              Imagina tener un asistente inteligente disponible <span className="text-[#C8760A] font-medium">24/7</span> para 
-              atender a tus clientes, responder preguntas frecuentes y automatizar tareas repetitivas.
-            </p>
-            <ul className="space-y-4 mb-8">
-              {[
-                "Atención al cliente automatizada",
-                "Respuestas instantáneas y precisas",
-                "Integración con tus sistemas existentes",
-                "Aprendizaje continuo y mejora constante"
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-[#F5F0E8]">
-                  <CheckCircle2 className="w-5 h-5 text-[#1A3A2A]" />
-                  {item}
+            <ul className="space-y-5 mb-8">
+              {currentCase.features.map((item, i) => (
+                <li key={i} className="flex items-start gap-4 text-[#F5F0E8]">
+                  <div className="w-8 h-8 rounded-lg bg-[#1A3A2A]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#C8760A]" />
+                  </div>
+                  <span className="text-lg font-light">{item}</span>
                 </li>
               ))}
             </ul>
@@ -686,10 +772,10 @@ const AISection = () => {
 
           {/* Chat Mockup */}
           <motion.div 
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            key={`chat-${activeTab}`}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
             className="chat-mockup p-6"
           >
             {/* Chat Header */}
@@ -698,28 +784,22 @@ const AISection = () => {
                 <Bot className="w-5 h-5 text-[#F5F0E8]" />
               </div>
               <div>
-                <p className="text-[#F5F0E8] font-medium">Asistente IA</p>
+                <p className="text-[#F5F0E8] font-medium">
+                  {activeTab === 'cliente' ? 'Asistente de Ventas' : 'Asistente Interno'}
+                </p>
                 <p className="text-xs text-[#1A3A2A]">En línea</p>
               </div>
             </div>
 
             {/* Chat Messages */}
             <div className="space-y-4">
-              <div className="flex justify-end">
-                <div className="chat-bubble-user px-4 py-3 max-w-[80%]">
-                  <p className="text-sm font-medium">¿Cuáles son sus horarios de atención?</p>
+              {currentCase.chatMessages.map((msg, i) => (
+                <div key={i} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`${msg.type === 'user' ? 'chat-bubble-user' : 'chat-bubble-ai'} px-4 py-3 max-w-[85%]`}>
+                    <p className={`text-sm ${msg.type === 'user' ? 'font-medium' : ''}`}>{msg.text}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-start">
-                <div className="chat-bubble-ai px-4 py-3 max-w-[80%]">
-                  <p className="text-sm">¡Hola! Gracias por contactarnos. Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00 hrs. Sin embargo, yo estoy disponible 24/7 para ayudarte. ¿En qué puedo asistirte?</p>
-                </div>
-              </div>
-              <div className="flex justify-end">
-                <div className="chat-bubble-user px-4 py-3 max-w-[80%]">
-                  <p className="text-sm font-medium">Necesito cotizar una app móvil</p>
-                </div>
-              </div>
+              ))}
               <div className="flex justify-start items-end gap-2">
                 <div className="chat-bubble-ai px-4 py-3">
                   <div className="flex gap-1">
