@@ -133,24 +133,23 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-3" data-testid="logo-link">
-            <div className="w-10 h-10 relative logo-glow">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <defs>
-                  <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#E89B2D" />
-                    <stop offset="100%" stopColor="#C8760A" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M50 10 C 80 10, 90 40, 70 60 C 50 80, 20 70, 20 50 C 20 30, 30 10, 50 10"
-                  fill="none"
-                  stroke="url(#amberGrad)"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-            <span className="font-serif text-2xl tracking-wide text-[#F5F0E8]">Ambar Rojo</span>
+            <svg width="40" height="40" viewBox="0 0 40 40" className="logo-glow flex-shrink-0">
+              <rect x="1.5" y="1.5" width="37" height="37" rx="8" ry="8"
+                fill="#1C1410"
+                stroke="#C8760A"
+                strokeWidth="1.5"
+              />
+              <text
+                x="20" y="28"
+                textAnchor="middle"
+                fontFamily="Georgia, 'Times New Roman', serif"
+                fontWeight="700"
+                fontSize="26"
+                fill="#A8001E"
+                letterSpacing="-1"
+              >A</text>
+            </svg>
+            <span className="font-serif text-2xl tracking-wide text-[#F5F0E8]">Ambar Rojo Studios</span>
           </a>
 
           {/* Desktop Nav */}
