@@ -1027,8 +1027,8 @@ function App() {
       <Services />
       <Portfolio />
       <AISection />
-      <Contact />
       <WhyUs />
+      <Contact />
       <Footer />
       <WhatsAppButton />
     </div>
