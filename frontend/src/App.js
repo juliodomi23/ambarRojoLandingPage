@@ -115,8 +115,9 @@ const Navigation = () => {
   const navLinks = [
     { name: 'Nosotros', href: '#about' },
     { name: 'Servicios', href: '#services' },
+    { name: 'Proyectos', href: '#portfolio' },
     { name: 'IA', href: '#ai' },
-    { name: 'Contacto', href: '#contact' }
+    { name: '¿Por qué nosotros?', href: '#why-us' }
   ];
 
   return (
@@ -492,7 +493,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 relative textile-pattern" data-testid="why-us-section">
+    <section id="why-us" className="py-24 md:py-32 relative textile-pattern" data-testid="why-us-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div {...fadeInUp} className="text-center mb-16">
           <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
@@ -1024,10 +1025,10 @@ function App() {
       <Hero />
       <About />
       <Services />
-      <WhyUs />
       <Portfolio />
       <AISection />
       <Contact />
+      <WhyUs />
       <Footer />
       <WhatsAppButton />
     </div>
