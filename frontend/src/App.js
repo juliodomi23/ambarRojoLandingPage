@@ -252,10 +252,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#F5F0E8] leading-[1.1] mb-8"
+          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F5F0E8] leading-[1.15] mb-8"
         >
-          Raíces digitales,<br />
-          <span className="text-gradient-warm">futuro brillante</span>
+          Millones de años formaron el ámbar rojo.<br />
+          <span className="text-[#C8760A]">Nosotros tardamos menos en transformar tu negocio.</span>
         </motion.h1>
 
         <motion.p
@@ -528,6 +528,114 @@ const WhyUs = () => {
               </p>
             </motion.div>
           ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// Portfolio Section
+const Portfolio = () => {
+  const projects = [
+    {
+      category: "App Móvil",
+      title: "FinanzasChiapas",
+      description: "Aplicación de gestión financiera para cooperativas locales",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=80"
+    },
+    {
+      category: "Software",
+      title: "Sistema de Inventarios",
+      description: "Plataforma web para control de inventarios en tiempo real",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+    },
+    {
+      category: "Agente IA",
+      title: "AsistenteComercial",
+      description: "Chatbot inteligente para atención al cliente 24/7",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80"
+    }
+  ];
+
+  return (
+    <section id="portfolio" className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #1C1410 0%, #1A1612 50%, #1C1410 100%)' }} data-testid="portfolio-section">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <motion.div {...fadeInUp} className="text-center mb-16">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+            Portafolio
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
+            Proyectos que hablan por sí solos
+          </h2>
+          <div className="maya-divider w-40 mx-auto" />
+        </motion.div>
+
+        <motion.div 
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12"
+        >
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              variants={staggerItem}
+              className="group relative rounded-2xl overflow-hidden bg-[#2A211A] border border-[#C8760A]/10 hover:border-[#C8760A]/40 transition-all duration-500"
+              data-testid={`portfolio-card-${index}`}
+            >
+              {/* Image */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Amber Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1C1410] via-[#1C1410]/60 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-[#C8760A]/0 group-hover:bg-[#C8760A]/20 transition-all duration-500" />
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                {/* Category Tag */}
+                <span className="inline-block text-xs px-3 py-1.5 rounded-full bg-[#C8760A]/10 border border-[#C8760A]/20 text-[#C8760A] tracking-wider uppercase mb-4">
+                  {project.category}
+                </span>
+
+                {/* Title */}
+                <h3 className="font-serif text-2xl text-[#F5F0E8] mb-2">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-[#9A8B7A] font-light text-sm leading-relaxed mb-4">
+                  {project.description}
+                </p>
+
+                {/* Link */}
+                <a 
+                  href="#" 
+                  className="inline-flex items-center gap-2 text-[#C8760A] font-medium text-sm tracking-wide hover:gap-3 transition-all group-hover:text-[#E89B2D]"
+                >
+                  Ver proyecto
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* View All Button */}
+        <motion.div {...fadeInUp} className="text-center">
+          <a
+            href="#"
+            className="btn-outline-cream inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-medium tracking-wide"
+            data-testid="portfolio-view-all"
+          >
+            Ver todos los proyectos
+            <ArrowRight size={18} />
+          </a>
         </motion.div>
       </div>
     </section>
@@ -838,6 +946,7 @@ function App() {
       <About />
       <Services />
       <WhyUs />
+      <Portfolio />
       <AISection />
       <Contact />
       <Footer />
