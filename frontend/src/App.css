@@ -1,4 +1,4 @@
-/* Amber Dust Particles */
+/* Crimson Dust Particles */
 .amber-particles {
   position: absolute;
   inset: 0;
@@ -10,7 +10,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: radial-gradient(circle, rgba(200, 118, 10, 0.8) 0%, rgba(200, 118, 10, 0) 70%);
+  background: radial-gradient(circle, rgba(144, 0, 36, 0.8) 0%, rgba(144, 0, 36, 0) 70%);
   border-radius: 50%;
   animation: float-particle 15s ease-in-out infinite;
 }
@@ -35,12 +35,12 @@
   }
 }
 
-/* Firefly Glow */
+/* Firefly Glow - Crimson */
 .firefly {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: radial-gradient(circle, rgba(232, 155, 45, 0.9) 0%, rgba(200, 118, 10, 0.4) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 64, 0.9) 0%, rgba(144, 0, 36, 0.4) 40%, transparent 70%);
   border-radius: 50%;
   animation: firefly-glow 4s ease-in-out infinite;
   filter: blur(1px);
@@ -59,18 +59,18 @@
 
 /* Hero Background Gradient */
 .hero-bg-gradient {
-  background: 
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(200, 118, 10, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(200, 118, 10, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse 50% 30% at 80% 20%, rgba(26, 58, 42, 0.1) 0%, transparent 40%),
-    linear-gradient(180deg, #1C1410 0%, #1A1612 50%, #1C1410 100%);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(144, 0, 36, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(144, 0, 36, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse 50% 30% at 80% 20%, rgba(84, 1, 21, 0.12) 0%, transparent 40%),
+    linear-gradient(180deg, #0D0004 0%, #0F0005 50%, #0D0004 100%);
 }
 
 /* Service Card */
 .service-card-warm {
   position: relative;
-  background: linear-gradient(145deg, rgba(42, 33, 26, 0.6) 0%, rgba(28, 20, 16, 0.8) 100%);
-  border: 1px solid rgba(200, 118, 10, 0.1);
+  background: linear-gradient(145deg, rgba(26, 0, 10, 0.6) 0%, rgba(13, 0, 4, 0.8) 100%);
+  border: 1px solid rgba(144, 0, 36, 0.1);
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -85,12 +85,12 @@
   height: 4px;
   background: repeating-linear-gradient(
     90deg,
-    #C8760A 0px,
-    #C8760A 6px,
-    #1A3A2A 6px,
-    #1A3A2A 12px,
-    #A8001E 12px,
-    #A8001E 16px,
+    #900024 0px,
+    #900024 6px,
+    #540115 6px,
+    #540115 12px,
+    #FF0040 12px,
+    #FF0040 16px,
     transparent 16px,
     transparent 20px
   );
@@ -99,43 +99,43 @@
 
 .service-card-warm:hover {
   transform: translateY(-8px);
-  border-color: rgba(200, 118, 10, 0.3);
-  box-shadow: 0 20px 50px rgba(200, 118, 10, 0.15), 0 0 80px rgba(200, 118, 10, 0.05);
+  border-color: rgba(144, 0, 36, 0.4);
+  box-shadow: 0 20px 50px rgba(144, 0, 36, 0.2), 0 0 80px rgba(144, 0, 36, 0.08);
 }
 
 /* AI Section Special Styling */
 .ai-section {
   position: relative;
-  background: linear-gradient(180deg, #1C1410 0%, #151210 50%, #1C1410 100%);
+  background: linear-gradient(180deg, #0D0004 0%, #0A0003 50%, #0D0004 100%);
 }
 
 .ai-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(ellipse 50% 30% at 30% 50%, rgba(200, 118, 10, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 70% 60%, rgba(26, 58, 42, 0.06) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse 50% 30% at 30% 50%, rgba(144, 0, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 70% 60%, rgba(84, 1, 21, 0.07) 0%, transparent 50%);
   pointer-events: none;
 }
 
 /* Chat Mockup */
 .chat-mockup {
-  background: linear-gradient(145deg, rgba(42, 33, 26, 0.5) 0%, rgba(28, 20, 16, 0.7) 100%);
-  border: 1px solid rgba(200, 118, 10, 0.2);
+  background: linear-gradient(145deg, rgba(26, 0, 10, 0.5) 0%, rgba(13, 0, 4, 0.7) 100%);
+  border: 1px solid rgba(144, 0, 36, 0.2);
   border-radius: 20px;
   overflow: hidden;
 }
 
 .chat-bubble-user {
-  background: linear-gradient(135deg, #C8760A 0%, #B06808 100%);
-  color: #1C1410;
+  background: linear-gradient(135deg, #900024 0%, #6B001A 100%);
+  color: #F5F0E8;
   border-radius: 18px 18px 4px 18px;
 }
 
 .chat-bubble-ai {
-  background: rgba(26, 58, 42, 0.4);
-  border: 1px solid rgba(26, 58, 42, 0.3);
+  background: rgba(84, 1, 21, 0.4);
+  border: 1px solid rgba(84, 1, 21, 0.3);
   color: #F5F0E8;
   border-radius: 18px 18px 18px 4px;
 }
@@ -146,7 +146,7 @@
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1;
-  background: linear-gradient(180deg, #F5F0E8 0%, #C8760A 100%);
+  background: linear-gradient(180deg, #F5F0E8 0%, #900024 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -158,7 +158,7 @@
   }
 }
 
-/* WhatsApp Button - Warm Style */
+/* WhatsApp Button */
 .whatsapp-btn-warm {
   position: fixed;
   bottom: 24px;
@@ -183,11 +183,11 @@
 
 /* Footer */
 .footer-warm {
-  background: linear-gradient(180deg, #1C1410 0%, #151210 100%);
-  border-top: 1px solid rgba(200, 118, 10, 0.1);
+  background: linear-gradient(180deg, #0D0004 0%, #0A0002 100%);
+  border-top: 1px solid rgba(144, 0, 36, 0.15);
 }
 
-/* Decorative Maya Pattern Border */
+/* Decorative Pattern Border */
 .maya-pattern-border {
   position: relative;
 }
@@ -200,12 +200,12 @@
   transform: translateX(-50%);
   width: 200px;
   height: 8px;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4 L4 0 L8 4 L4 8 Z M10 4 L14 0 L18 4 L14 8 Z M20 4 L24 0 L28 4 L24 8 Z M30 4 L34 0 L38 4 L34 8 Z' fill='%23C8760A' fill-opacity='0.4'/%3E%3C/svg%3E") repeat-x;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4 L4 0 L8 4 L4 8 Z M10 4 L14 0 L18 4 L14 8 Z M20 4 L24 0 L28 4 L24 8 Z M30 4 L34 0 L38 4 L34 8 Z' fill='%23900024' fill-opacity='0.5'/%3E%3C/svg%3E") repeat-x;
 }
 
 /* Contact Section */
 .contact-warm {
-  background: linear-gradient(180deg, rgba(200, 118, 10, 0.03) 0%, rgba(28, 20, 16, 0) 100%);
+  background: linear-gradient(180deg, rgba(144, 0, 36, 0.04) 0%, rgba(13, 0, 4, 0) 100%);
 }
 
 /* Responsive Adjustments */
@@ -230,10 +230,10 @@
 /* Logo Animation */
 @keyframes logo-breathe {
   0%, 100% {
-    filter: drop-shadow(0 0 8px rgba(200, 118, 10, 0.3));
+    filter: drop-shadow(0 0 8px rgba(144, 0, 36, 0.4));
   }
   50% {
-    filter: drop-shadow(0 0 15px rgba(200, 118, 10, 0.5));
+    filter: drop-shadow(0 0 18px rgba(255, 0, 64, 0.6));
   }
 }
 

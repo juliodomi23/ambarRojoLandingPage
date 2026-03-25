@@ -126,31 +126,19 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'warm-glass border-b border-[#C8760A]/10' : ''
+        isScrolled ? 'warm-glass border-b border-[#900024]/10' : ''
       }`}
       data-testid="main-navigation"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-3" data-testid="logo-link">
-            <svg width="40" height="40" viewBox="0 0 40 40" className="logo-glow flex-shrink-0">
-              <rect x="1.5" y="1.5" width="37" height="37" rx="8" ry="8"
-                fill="#1C1410"
-                stroke="#C8760A"
-                strokeWidth="1.5"
-              />
-              <text
-                x="20" y="28"
-                textAnchor="middle"
-                fontFamily="Georgia, 'Times New Roman', serif"
-                fontWeight="700"
-                fontSize="26"
-                fill="#A8001E"
-                letterSpacing="-1"
-              >A</text>
-            </svg>
-            <span className="font-serif text-2xl tracking-wide text-[#F5F0E8]">Ambar Rojo Studios</span>
+          <a href="#hero" className="flex items-center" data-testid="logo-link">
+            <img
+              src="/LOGO_NVO.jpg"
+              alt="Ambar Rojo Studios"
+              className="logo-glow h-12 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -191,7 +179,7 @@ const Navigation = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden warm-glass border-t border-[#C8760A]/10"
+          className="md:hidden warm-glass border-t border-[#900024]/10"
         >
           <div className="px-6 py-8 space-y-6">
             {navLinks.map(link => (
@@ -243,7 +231,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-sm md:text-base font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-6"
+          className="text-sm md:text-base font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-6"
         >
           Desde Tuxtla Gutiérrez, Chiapas
         </motion.p>
@@ -255,14 +243,14 @@ const Hero = () => {
           className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F5F0E8] leading-[1.15] mb-8"
         >
           Millones de años formaron el ámbar rojo.<br />
-          <span className="text-[#C8760A]">Nosotros tardamos menos en transformar tu negocio.</span>
+          <span className="text-[#900024]">Nosotros tardamos menos en transformar tu negocio.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-[#9A8B7A] font-light max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-[#9A8080] font-light max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Crear y desarrollar experiencias es la meta. Somos un estudio de software 
           e inteligencia artificial con raíces profundas en Chiapas.
@@ -297,15 +285,15 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#9A8B7A]"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#9A8080]"
       >
         <span className="text-xs tracking-[0.15em] uppercase font-sans">Descubre más</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border border-[#C8760A]/30 flex items-start justify-center pt-2"
+          className="w-6 h-10 rounded-full border border-[#900024]/30 flex items-start justify-center pt-2"
         >
-          <div className="w-1.5 h-3 rounded-full bg-[#C8760A]" />
+          <div className="w-1.5 h-3 rounded-full bg-[#900024]" />
         </motion.div>
       </motion.div>
     </section>
@@ -330,13 +318,13 @@ const About = () => {
               transition={{ duration: 1 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#C8760A]/20 to-[#1A3A2A]/20 rounded-2xl transform rotate-3" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#900024]/20 to-[#540115]/20 rounded-2xl transform rotate-3" />
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
                 alt="Equipo Ambar Rojo Studios"
                 className="relative w-full aspect-[4/5] object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1C1410] via-transparent to-transparent rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0004] via-transparent to-transparent rounded-2xl" />
               
               {/* Badge */}
               <motion.div
@@ -346,8 +334,8 @@ const About = () => {
                 transition={{ delay: 0.4 }}
                 className="absolute -bottom-6 -right-6 warm-glass-card p-6 rounded-2xl"
               >
-                <p className="text-[#C8760A] font-serif text-4xl font-semibold">2025</p>
-                <p className="text-[#9A8B7A] text-sm tracking-wider uppercase font-sans">Certificados</p>
+                <p className="text-[#900024] font-serif text-4xl font-semibold">2025</p>
+                <p className="text-[#9A8080] text-sm tracking-wider uppercase font-sans">Certificados</p>
               </motion.div>
             </motion.div>
           </div>
@@ -356,7 +344,7 @@ const About = () => {
           <div className="order-1 md:order-2">
             <motion.span 
               {...staggerItem}
-              className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block"
+              className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block"
             >
               Sobre Nosotros
             </motion.span>
@@ -369,16 +357,16 @@ const About = () => {
             <div className="maya-divider w-24 mb-8" />
             <motion.p 
               {...staggerItem}
-              className="text-lg text-[#9A8B7A] font-light leading-relaxed mb-6"
+              className="text-lg text-[#9A8080] font-light leading-relaxed mb-6"
             >
               Desde <span className="text-[#F5F0E8]">Tuxtla Gutiérrez</span> creamos soluciones de software 
               que combinan la calidez de nuestra tierra con la precisión de la tecnología moderna.
             </motion.p>
             <motion.p 
               {...staggerItem}
-              className="text-lg text-[#9A8B7A] font-light leading-relaxed mb-8"
+              className="text-lg text-[#9A8080] font-light leading-relaxed mb-8"
             >
-              Nuestro nombre rinde homenaje al <span className="text-[#C8760A] font-medium">ámbar rojo</span>, 
+              Nuestro nombre rinde homenaje al <span className="text-[#900024] font-medium">ámbar rojo</span>, 
               una piedra prehistórica que solo existe en dos lugares del mundo — y uno de ellos es 
               <span className="text-[#F5F0E8]"> Chiapas</span>. Como esa resina milenaria que preserva 
               la vida, nosotros preservamos y transformamos ideas en experiencias digitales duraderas.
@@ -386,7 +374,7 @@ const About = () => {
             <motion.a
               {...staggerItem}
               href="#services"
-              className="inline-flex items-center gap-2 text-[#C8760A] font-medium tracking-wide hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 text-[#900024] font-medium tracking-wide hover:gap-4 transition-all"
               data-testid="about-cta"
             >
               Conoce nuestros servicios
@@ -423,10 +411,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #1C1410 0%, #1A1612 50%, #1C1410 100%)' }} data-testid="services-section">
+    <section id="services" className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #0D0004 0%, #0F0005 50%, #0D0004 100%)' }} data-testid="services-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div {...fadeInUp} className="text-center mb-16">
-          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block">
             Nuestros Servicios
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
@@ -450,8 +438,8 @@ const Services = () => {
               data-testid={`service-card-${index}`}
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-[#C8760A]/10 flex items-center justify-center mb-6">
-                <service.icon className="w-7 h-7 text-[#C8760A]" />
+              <div className="w-14 h-14 rounded-xl bg-[#900024]/10 flex items-center justify-center mb-6">
+                <service.icon className="w-7 h-7 text-[#900024]" />
               </div>
 
               {/* Title */}
@@ -460,7 +448,7 @@ const Services = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-[#9A8B7A] font-light leading-relaxed mb-6">
+              <p className="text-[#9A8080] font-light leading-relaxed mb-6">
                 {service.description}
               </p>
 
@@ -469,7 +457,7 @@ const Services = () => {
                 {service.tags.map(tag => (
                   <span
                     key={tag}
-                    className="text-xs px-3 py-1.5 rounded-full bg-[#C8760A]/5 border border-[#C8760A]/10 text-[#C8760A] tracking-wider"
+                    className="text-xs px-3 py-1.5 rounded-full bg-[#900024]/5 border border-[#900024]/10 text-[#900024] tracking-wider"
                   >
                     {tag}
                   </span>
@@ -496,7 +484,7 @@ const WhyUs = () => {
     <section id="why-us" className="py-24 md:py-32 relative textile-pattern" data-testid="why-us-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div {...fadeInUp} className="text-center mb-16">
-          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block">
             ¿Por Qué Nosotros?
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
@@ -519,11 +507,11 @@ const WhyUs = () => {
               className="text-center"
               data-testid={`stat-${index}`}
             >
-              <div className="w-12 h-12 rounded-xl bg-[#1A3A2A]/30 flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-6 h-6 text-[#C8760A]" />
+              <div className="w-12 h-12 rounded-xl bg-[#540115]/30 flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-6 h-6 text-[#900024]" />
               </div>
               <p className="stat-number mb-2">{stat.value}</p>
-              <p className="text-[#9A8B7A] text-sm tracking-wider uppercase font-sans">
+              <p className="text-[#9A8080] text-sm tracking-wider uppercase font-sans">
                 {stat.label}
               </p>
             </motion.div>
@@ -561,10 +549,10 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #1C1410 0%, #1A1612 50%, #1C1410 100%)' }} data-testid="portfolio-section">
+    <section id="portfolio" className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #0D0004 0%, #0F0005 50%, #0D0004 100%)' }} data-testid="portfolio-section">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div {...fadeInUp} className="text-center mb-16">
-          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block">
             Portafolio
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
@@ -584,7 +572,7 @@ const Portfolio = () => {
             <motion.div
               key={project.title}
               variants={staggerItem}
-              className="group relative rounded-2xl overflow-hidden bg-[#2A211A] border border-[#C8760A]/10 hover:border-[#C8760A]/40 transition-all duration-500"
+              className="group relative rounded-2xl overflow-hidden bg-[#1A000A] border border-[#900024]/10 hover:border-[#900024]/40 transition-all duration-500"
               data-testid={`portfolio-card-${index}`}
             >
               {/* Image */}
@@ -595,14 +583,14 @@ const Portfolio = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Amber Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1C1410] via-[#1C1410]/60 to-transparent opacity-80" />
-                <div className="absolute inset-0 bg-[#C8760A]/0 group-hover:bg-[#C8760A]/20 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0004] via-[#0D0004]/60 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-[#900024]/0 group-hover:bg-[#900024]/20 transition-all duration-500" />
               </div>
 
               {/* Content */}
               <div className="p-6">
                 {/* Category Tag */}
-                <span className="inline-block text-xs px-3 py-1.5 rounded-full bg-[#C8760A]/10 border border-[#C8760A]/20 text-[#C8760A] tracking-wider uppercase mb-4">
+                <span className="inline-block text-xs px-3 py-1.5 rounded-full bg-[#900024]/10 border border-[#900024]/20 text-[#900024] tracking-wider uppercase mb-4">
                   {project.category}
                 </span>
 
@@ -612,7 +600,7 @@ const Portfolio = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#9A8B7A] font-light text-sm leading-relaxed mb-4">
+                <p className="text-[#9A8080] font-light text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 
@@ -622,7 +610,7 @@ const Portfolio = () => {
                     {project.badges.map(badge => (
                       <span
                         key={badge}
-                        className="text-xs px-2.5 py-1 rounded-md bg-[#1A3A2A]/30 border border-[#1A3A2A]/40 text-[#F5F0E8] tracking-wide"
+                        className="text-xs px-2.5 py-1 rounded-md bg-[#540115]/30 border border-[#540115]/40 text-[#F5F0E8] tracking-wide"
                       >
                         {badge}
                       </span>
@@ -633,7 +621,7 @@ const Portfolio = () => {
                 {/* Link */}
                 <a 
                   href="#" 
-                  className="inline-flex items-center gap-2 text-[#C8760A] font-medium text-sm tracking-wide hover:gap-3 transition-all group-hover:text-[#E89B2D]"
+                  className="inline-flex items-center gap-2 text-[#900024] font-medium text-sm tracking-wide hover:gap-3 transition-all group-hover:text-[#FF0040]"
                 >
                   Ver proyecto
                   <ArrowRight size={16} />
@@ -699,7 +687,7 @@ const AISection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <motion.div {...fadeInUp} className="text-center mb-12">
-          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+          <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block">
             Inteligencia Artificial
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-6">
@@ -710,13 +698,13 @@ const AISection = () => {
 
         {/* Use Case Tabs */}
         <motion.div {...fadeInUp} className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-full bg-[#2A211A] border border-[#C8760A]/10">
+          <div className="inline-flex p-1.5 rounded-full bg-[#1A000A] border border-[#900024]/10">
             <button
               onClick={() => setActiveTab('cliente')}
               className={`px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
                 activeTab === 'cliente'
-                  ? 'bg-[#C8760A] text-[#1C1410]'
-                  : 'text-[#9A8B7A] hover:text-[#F5F0E8]'
+                  ? 'bg-[#900024] text-[#0D0004]'
+                  : 'text-[#9A8080] hover:text-[#F5F0E8]'
               }`}
               data-testid="ai-tab-cliente"
             >
@@ -727,8 +715,8 @@ const AISection = () => {
               onClick={() => setActiveTab('interna')}
               className={`px-6 py-3 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${
                 activeTab === 'interna'
-                  ? 'bg-[#C8760A] text-[#1C1410]'
-                  : 'text-[#9A8B7A] hover:text-[#F5F0E8]'
+                  ? 'bg-[#900024] text-[#0D0004]'
+                  : 'text-[#9A8080] hover:text-[#F5F0E8]'
               }`}
               data-testid="ai-tab-interna"
             >
@@ -753,8 +741,8 @@ const AISection = () => {
             <ul className="space-y-5 mb-8">
               {currentCase.features.map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-[#F5F0E8]">
-                  <div className="w-8 h-8 rounded-lg bg-[#1A3A2A]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C8760A]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#540115]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#900024]" />
                   </div>
                   <span className="text-lg font-light">{item}</span>
                 </li>
@@ -779,15 +767,15 @@ const AISection = () => {
             className="chat-mockup p-6"
           >
             {/* Chat Header */}
-            <div className="flex items-center gap-3 pb-4 border-b border-[#C8760A]/10 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C8760A] to-[#1A3A2A] flex items-center justify-center">
+            <div className="flex items-center gap-3 pb-4 border-b border-[#900024]/10 mb-6">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#900024] to-[#540115] flex items-center justify-center">
                 <Bot className="w-5 h-5 text-[#F5F0E8]" />
               </div>
               <div>
                 <p className="text-[#F5F0E8] font-medium">
                   {activeTab === 'cliente' ? 'Asistente de Ventas' : 'Asistente Interno'}
                 </p>
-                <p className="text-xs text-[#1A3A2A]">En línea</p>
+                <p className="text-xs text-[#540115]">En línea</p>
               </div>
             </div>
 
@@ -806,17 +794,17 @@ const AISection = () => {
                     <motion.div 
                       animate={{ opacity: [0.4, 1, 0.4] }}
                       transition={{ duration: 1, repeat: Infinity }}
-                      className="w-2 h-2 rounded-full bg-[#C8760A]"
+                      className="w-2 h-2 rounded-full bg-[#900024]"
                     />
                     <motion.div 
                       animate={{ opacity: [0.4, 1, 0.4] }}
                       transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
-                      className="w-2 h-2 rounded-full bg-[#C8760A]"
+                      className="w-2 h-2 rounded-full bg-[#900024]"
                     />
                     <motion.div 
                       animate={{ opacity: [0.4, 1, 0.4] }}
                       transition={{ duration: 1, repeat: Infinity, delay: 0.4 }}
-                      className="w-2 h-2 rounded-full bg-[#C8760A]"
+                      className="w-2 h-2 rounded-full bg-[#900024]"
                     />
                   </div>
                 </div>
@@ -837,14 +825,14 @@ const Contact = () => {
         <motion.div {...fadeInUp} className="grid md:grid-cols-2 gap-12 md:gap-20">
           {/* Left Side */}
           <div>
-            <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#C8760A] mb-4 block">
+            <span className="text-sm font-sans font-medium tracking-[0.2em] uppercase text-[#900024] mb-4 block">
               Contacto
             </span>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] mb-8 leading-[1.1]">
               Platiquemos de tu proyecto
             </h2>
             <div className="maya-divider w-24 mb-8" />
-            <p className="text-lg text-[#9A8B7A] font-light leading-relaxed mb-10">
+            <p className="text-lg text-[#9A8080] font-light leading-relaxed mb-10">
               Estamos listos para escucharte y convertir tus ideas en soluciones 
               digitales extraordinarias. Contáctanos sin compromiso.
             </p>
@@ -852,32 +840,32 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1A3A2A]/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[#C8760A]" />
+                <div className="w-12 h-12 rounded-xl bg-[#540115]/20 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-[#900024]" />
                 </div>
                 <div>
                   <p className="text-[#F5F0E8] font-medium mb-1">Ubicación</p>
-                  <p className="text-[#9A8B7A]">Tuxtla Gutiérrez, Chiapas, México</p>
+                  <p className="text-[#9A8080]">Tuxtla Gutiérrez, Chiapas, México</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1A3A2A]/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-[#C8760A]" />
+                <div className="w-12 h-12 rounded-xl bg-[#540115]/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#900024]" />
                 </div>
                 <div>
                   <p className="text-[#F5F0E8] font-medium mb-1">Teléfono</p>
-                  <p className="text-[#9A8B7A]">+52 961 XXX XXXX</p>
+                  <p className="text-[#9A8080]">+52 961 XXX XXXX</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1A3A2A]/20 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle className="w-5 h-5 text-[#C8760A]" />
+                <div className="w-12 h-12 rounded-xl bg-[#540115]/20 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-5 h-5 text-[#900024]" />
                 </div>
                 <div>
                   <p className="text-[#F5F0E8] font-medium mb-1">WhatsApp</p>
-                  <p className="text-[#9A8B7A]">Respuesta inmediata</p>
+                  <p className="text-[#9A8080]">Respuesta inmediata</p>
                 </div>
               </div>
             </div>
@@ -900,7 +888,7 @@ const Contact = () => {
               <h3 className="font-serif text-3xl text-[#F5F0E8] mb-4">
                 Escríbenos
               </h3>
-              <p className="text-[#9A8B7A] mb-8 font-light">
+              <p className="text-[#9A8080] mb-8 font-light">
                 Respuesta rápida por WhatsApp. Estamos disponibles para ti.
               </p>
               <a
@@ -929,25 +917,12 @@ const Footer = () => {
         <div className="maya-pattern-border pb-8 mb-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo */}
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 relative">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="amberGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#E89B2D" />
-                      <stop offset="100%" stopColor="#C8760A" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M50 10 C 80 10, 90 40, 70 60 C 50 80, 20 70, 20 50 C 20 30, 30 10, 50 10"
-                    fill="none"
-                    stroke="url(#amberGradFooter)"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-              <span className="font-serif text-xl tracking-wide text-[#F5F0E8]">Ambar Rojo Studios</span>
+            <div className="flex items-center">
+              <img
+                src="/LOGO_NVO.jpg"
+                alt="Ambar Rojo Studios"
+                className="logo-glow h-10 w-auto object-contain"
+              />
             </div>
 
             {/* Social Links */}
@@ -956,39 +931,39 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#C8760A]/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
                 data-testid="social-twitter"
               >
-                <Twitter size={18} className="text-[#9A8B7A]" />
+                <Twitter size={18} className="text-[#9A8080]" />
               </a>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#C8760A]/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
                 data-testid="social-facebook"
               >
-                <Facebook size={18} className="text-[#9A8B7A]" />
+                <Facebook size={18} className="text-[#9A8080]" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#C8760A]/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
                 data-testid="social-instagram"
               >
-                <Instagram size={18} className="text-[#9A8B7A]" />
+                <Instagram size={18} className="text-[#9A8080]" />
               </a>
             </div>
 
             {/* Copyright */}
-            <p className="text-[#9A8B7A] text-sm">
+            <p className="text-[#9A8080] text-sm">
               © 2025 Ambar Rojo Studios. Todos los derechos reservados.
             </p>
           </div>
         </div>
 
-        <p className="text-center text-[#9A8B7A]/50 text-xs tracking-wider uppercase">
+        <p className="text-center text-[#9A8080]/50 text-xs tracking-wider uppercase">
           Hecho con orgullo en Chiapas, México
         </p>
       </div>
@@ -1019,7 +994,7 @@ const WhatsAppButton = () => {
 // Main App
 function App() {
   return (
-    <div className="App min-h-screen" style={{ backgroundColor: '#1C1410' }}>
+    <div className="App min-h-screen" style={{ backgroundColor: '#0D0004' }}>
       <GrainOverlay />
       <Navigation />
       <Hero />
