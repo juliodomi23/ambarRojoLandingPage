@@ -476,9 +476,9 @@ const Services = () => {
 // Why Us Section
 const WhyUs = () => {
   const stats = [
-    { icon: Clock, value: "8+", label: "Años de experiencia" },
-    { icon: CheckCircle2, value: "120+", label: "Proyectos entregados" },
-    { icon: Users, value: "50+", label: "Clientes regionales" },
+    { icon: Clock, value: "10+", label: "Años de experiencia" },
+    { icon: CheckCircle2, value: "30+", label: "Proyectos entregados" },
+    { icon: Users, value: "40+", label: "Clientes regionales" },
     { icon: Award, value: "100%", label: "Compromiso local" }
   ];
 
@@ -961,7 +961,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <p className="text-[#9A8890] text-sm">
-              © 2025 Ambar Rojo Studios. Todos los derechos reservados.
+              © 2026 Ambar Rojo Studios. Todos los derechos reservados.
             </p>
           </div>
         </div>
