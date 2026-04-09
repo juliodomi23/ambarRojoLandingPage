@@ -11,9 +11,6 @@ import {
   Phone, 
   Menu, 
   X,
-  Twitter,
-  Facebook,
-  Instagram,
   CheckCircle2,
   Clock,
   Users,
@@ -857,7 +854,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[#F5F0E8] font-medium mb-1">Teléfono</p>
-                  <p className="text-[#9A8890]">+52 961 XXX XXXX</p>
+                  <p className="text-[#9A8890]">+52 961 268 0529</p>
                 </div>
               </div>
 
@@ -928,36 +925,15 @@ const Footer = () => {
               <span className="font-serif text-xl tracking-wide text-[#F5F0E8]">Ambar Rojo Studios</span>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
-                data-testid="social-twitter"
-              >
-                <Twitter size={18} className="text-[#9A8890]" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
-                data-testid="social-facebook"
-              >
-                <Facebook size={18} className="text-[#9A8890]" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#F5F0E8]/5 flex items-center justify-center hover:bg-[#900024]/20 transition-colors"
-                data-testid="social-instagram"
-              >
-                <Instagram size={18} className="text-[#9A8890]" />
-              </a>
-            </div>
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/529612680529"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#9A8890] hover:text-[#F5F0E8] transition-colors text-sm"
+            >
+              +52 961 268 0529
+            </a>
 
             {/* Copyright */}
             <p className="text-[#9A8890] text-sm">
